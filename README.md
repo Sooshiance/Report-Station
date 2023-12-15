@@ -1,7 +1,7 @@
 This app just a simple clone report application.
 It has 3 types of report daily, weekly and monthly.
 
-It uses celery to manipulate the type report, If that report pass some critical times.
+It uses celery to manipulate the type report, If that report passes some critical times.
 
 to run it you need some setup :
 

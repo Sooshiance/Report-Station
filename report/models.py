@@ -1,5 +1,7 @@
 from django.db import models
 
+from .tasks import *
+
 
 class ReportType:
     Daily = 1
@@ -22,3 +24,7 @@ class AllRerport(models.Model):
     
     def __str__(self) -> str:
         return f"{self.title} {self.report_type}"
+    
+    archiving_Weekly_Reports_as_Monthly()
+    
+    archiving_Daily_Reports_as_Weekly()

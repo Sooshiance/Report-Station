@@ -7,3 +7,4 @@ from .models import AllRerport
 class ReportAdmin(admin.ModelAdmin):
     list_display = ['title', 'report_type']
     prepopulated_fields = {'slug': ('title',)}
+    list_filter = ('report_type',)
