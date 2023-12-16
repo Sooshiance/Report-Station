@@ -1,0 +1,12 @@
+{% extends "root.html" %}
+{% block title %}
+    Daily
+{% endblock title %}
+{% block doc %}
+    <div>
+        {% for obj in daily %}
+            <h1>{{ obj.title }}</h1>
+            <p>{{ obj.txt }}</p>
+        {% endfor %}
+    </div>
+{% endblock doc %}

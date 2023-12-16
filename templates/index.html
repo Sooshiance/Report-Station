@@ -1,0 +1,34 @@
+{% extends "root.html" %}
+{% block title %}
+    Home page
+{% endblock title %}
+{% block doc %}
+    <div>
+        <h1>Daily Reports</h1>
+        {% for obj in daily %}
+            <h1>{{ obj.title }}</h1>
+            <h3>{{ obj.report_type }}</h3>
+            <p>{{ obj.txt }}</p>
+        {% endfor %}
+    </div>
+    <div>
+        <h1>Weekly Reports</h1>
+        {% for obj in weekly %}
+            <div>
+                <h1>{{ obj.title }}</h1>
+                <h3>{{ obj.report_type }}</h3>
+                <p>{{ obj.txt }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div>
+        <h1>Monthly Reports</h1>
+        {% for obj in monthly %}
+            <div>
+                <h1>{{ obj.title }}</h1>
+                <h3>{{ obj.report_type }}</h3>
+                <p>{{ obj.txt }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock doc %}

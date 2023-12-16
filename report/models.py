@@ -16,7 +16,7 @@ class ReportType:
 class AllRerport(models.Model):
     title       = models.CharField(max_length=64, unique=True)
     slug        = models.SlugField(unique=True, primary_key=True, allow_unicode=True)
-    report_type = models.PositiveSmallIntegerField(choices=ReportType.REPORTS)
+    report_type = models.PositiveSmallIntegerField(choices=ReportType.REPORTS, default=1)
     txt         = models.CharField(max_length=8000)
     created_at  = models.DateTimeField(auto_now_add=True)
     
